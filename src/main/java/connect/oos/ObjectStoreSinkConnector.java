@@ -1,5 +1,6 @@
 package connect.oos;
 
+import connect.oos.util.VersionUtil;
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.connect.connector.Task;
 import org.apache.kafka.connect.sink.SinkConnector;

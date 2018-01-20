@@ -1,9 +1,9 @@
-package connect.oos;
+package connect.oos.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-class VersionUtil {
+public class VersionUtil {
     private static final Logger log = LoggerFactory.getLogger(VersionUtil.class);
     private static final String DEFAULT_VERSION = "0.0.0.0";
     private static String version = DEFAULT_VERSION;
