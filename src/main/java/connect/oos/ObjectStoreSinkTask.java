@@ -63,7 +63,7 @@ public class ObjectStoreSinkTask extends SinkTask {
     public void put(Collection<SinkRecord> records) {
         log.info("sinkTask.put size={}", records.size());
         records.forEach(record -> {
-            log.info("sinkTask.put tp={}-{} offset={} key={} value={}", record.topic(), record.kafkaPartition(), record.kafkaOffset(), record.key(), record.value());
+            log.info("sinkTask.put tp={}-{} offset={}", record.topic(), record.kafkaPartition(), record.kafkaOffset());
             TopicPartition tp = new TopicPartition(record.topic(), record.kafkaPartition());
             TopicPartitionWriter tpw = topicPartitionWriters.get(tp);
             if(tpw == null) {

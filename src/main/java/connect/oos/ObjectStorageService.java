@@ -1,11 +1,9 @@
 package connect.oos;
 
-import java.io.OutputStream;
-
 public interface ObjectStorageService {
-    boolean mkDirs();
-    OutputStream create();
-    boolean rename();
-    boolean delete();
-    long getLastOffset();
+    boolean mkDirs(String path);
+    boolean upload(String localPath, String storageKey);
+    boolean rename(String oldKey, String newKey);
+    boolean delete(String storageKey);
+    long getLastOffset(String dirPath);
 }
